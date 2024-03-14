@@ -19,13 +19,18 @@ public_html/storage
 public_html/hot
 
 storage/*.key
-.env*
+.env
+.env.testing
+.env.local
+env-dev
+env-production
 .constants
 Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
 .phpunit.cache
+phpunit.xml
 
 # Ignore Laravel Mix output
 public/mix-js

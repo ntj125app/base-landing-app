@@ -2,13 +2,15 @@
 
 namespace Tests;
 
+use Database\Seeders\RolesPermissionSeeder;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Illuminate\Routing\Middleware\ThrottleRequestsWithRedis;
 use Illuminate\Support\Facades\Artisan;
 
 abstract class TestCase extends BaseTestCase
 {
-    use CreatesApplication;
+    use RefreshDatabase;
 
     protected function setUp(): void
     {
@@ -27,6 +29,7 @@ abstract class TestCase extends BaseTestCase
     protected function testSeed(): array
     {
         return [
+            RolesPermissionSeeder::class,
         ];
     }
 

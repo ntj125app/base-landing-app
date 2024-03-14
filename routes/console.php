@@ -1,7 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Log;
+use Laravel\Telescope\Telescope;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +17,11 @@ use Illuminate\Support\Facades\Log;
 */
 
 Artisan::command('patch:deploy', function () {
+    /** Memory Leak mitigation */
+    if (App::environment('local')) {
+        Telescope::stopRecording();
+    }
+
     /** PATCH DO HERE */
     $patchId = 'NULL';
 
