@@ -12,6 +12,8 @@ class LandingController extends Controller
     {
         Log::debug('Landing page accessed', ['request' => $request->all(), 'remoteIp' => $request->ip()]);
 
-        return view('landing.index');
+        return view('base-components.base-vue', [
+            'pageTitle' => 'Landing Page',
+        ]);
     }
 }
