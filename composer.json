@@ -2,6 +2,7 @@
     "name": "ntj125app/base-landing-app",
     "type": "project",
     "description": "Base Landing Page or Simple Page Apps",
+    "version": "1.0.0",
     "keywords": [
         "laravel",
         "framework"
@@ -11,6 +12,7 @@
         "php": "^8.2",
         "laravel/framework": "^11.0",
         "laravel/pennant": "^1.7",
+        "laravel/pulse": "@beta",
         "laravel/tinker": "^2.9",
         "sentry/sentry-laravel": "^4.3",
         "spomky-labs/base64url": "^2.0"
