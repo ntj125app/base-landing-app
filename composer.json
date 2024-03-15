@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "ntj125app/base-landing-app",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "Base Landing Page or Simple Page Apps",
     "keywords": [
         "laravel",
         "framework"
