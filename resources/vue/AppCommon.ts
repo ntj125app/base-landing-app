@@ -127,8 +127,10 @@ export type UserDataInterface = {
     created_at: string;
     updated_at: string;
     deleted_at: string;
-    permissions: Array<string>;
-    roles: Array<string>;
+    permissions: Array<PermissionDataInterface>;
+    permissions_array: Array<string>;
+    roles: Array<RoleDataInterface>;
+    roles_array: Array<string>;
 };
 
 export {
