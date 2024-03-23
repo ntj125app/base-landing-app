@@ -31,6 +31,7 @@ export const useMainStore = defineStore("main", {
         appName: import.meta.env.APP_NAME,
         appVersion: "",
         userName: "",
+        userId: "",
         notificationList: [],
         browserSuppport: true,
         menuItems: Array<MenuItemExtended>(),
