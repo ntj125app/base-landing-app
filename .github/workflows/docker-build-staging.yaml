@@ -30,7 +30,7 @@ jobs:
       - name: Composer Install
         uses: ramsey/composer-install@v3
         with:
-          composer-options: "--ignore-platform-reqs --optimize-autoloader --no-dev"
+          composer-options: "--ignore-platform-reqs --optimize-autoloader --no-dev --no-interaction --no-progress --no-suggest --prefer-dist"
 
       - name: Create .env file
         run: |
@@ -38,11 +38,6 @@ jobs:
               php artisan env:decrypt --env=dev --key=${{ env.ENV_KEY }}
               ln -s .env.dev .env
               ls -lah .env*
-          fi
-
-          if [ ! -f database/database.sqlite ]; then
-              touch database/database.sqlite
-              php artisan migrate --graceful --ansi --force --database=sqlite
           fi
 
       - name: Install Node.js
@@ -69,7 +64,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --prod
 
       - name: NPM Build
         run: pnpm dlx vite build
@@ -80,7 +75,6 @@ jobs:
           sudo ln -s $(pwd) /var/www/vhosts/localhost
           cd /var/www/vhosts/localhost
           pwd && ls -lah
-          php artisan migrate --graceful --ansi --force
           php artisan event:cache
           php artisan config:cache
 
