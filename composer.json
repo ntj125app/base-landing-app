@@ -15,6 +15,7 @@
         "laravel/pulse": "@beta",
         "laravel/tinker": "^2.9",
         "sentry/sentry-laravel": "^4.3",
+        "spatie/laravel-health": "^1.29",
         "spomky-labs/base64url": "^2.0"
     },
     "require-dev": {
