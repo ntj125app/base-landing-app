@@ -12,7 +12,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/app/healthcheck',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->trustProxies(headers: Request::HEADER_HTTP_X_REAL_IP);
+        $middleware->trustProxies(headers: Request::HEADER_X_FORWARDED_FOR);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         if (app()->bound('sentry')) {
