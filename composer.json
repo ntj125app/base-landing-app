@@ -11,9 +11,11 @@
     "require": {
         "php": "^8.2",
         "laravel/framework": "^11.0",
+        "laravel/octane": "^2.5",
         "laravel/pennant": "^1.7",
         "laravel/pulse": "@beta",
         "laravel/tinker": "^2.9",
+        "openswoole/core": "^22.1",
         "sentry/sentry-laravel": "^4.3",
         "spatie/laravel-health": "^1.29",
         "spomky-labs/base64url": "^2.0"
