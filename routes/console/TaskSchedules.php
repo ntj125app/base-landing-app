@@ -21,9 +21,9 @@ if (class_exists(\Laravel\Telescope\TelescopeServiceProvider::class)) {
 }
 
 if (class_exists(\Laravel\Pulse\PulseServiceProvider::class)) {
-    Schedule::command('pulse:check', ['--once'])->everyThirtySeconds()->withoutOverlapping();
-    Schedule::command('pulse:work', ['--stop-when-empty'])->everyTenSeconds()->withoutOverlapping();
-    Schedule::command('pulse:clear', ['--type=cpu,memory,system'])->hourly();
+    Schedule::command('pulse:check')->dailyAt('00:00')->withoutOverlapping();
+    Schedule::command('pulse:work')->everyFifteenMinutes()->withoutOverlapping();
+    Schedule::command('pulse:clear', ['--type=cpu,memory,system'])->everyFifteenMinutes();
 }
 
 if (config('cache.default') === 'redis') {
