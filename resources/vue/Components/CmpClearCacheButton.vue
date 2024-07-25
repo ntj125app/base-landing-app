@@ -32,7 +32,7 @@ const postClearCache = () => {
 </script>
 
 <template>
-    <div class="flex">
+    <div class="flex mx-2">
         <CmpToast ref="toastchild" />
         <Button
             icon="pi pi-sync"
