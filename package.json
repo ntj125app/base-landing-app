@@ -12,9 +12,9 @@
         "prettier:fix": "prettier --write resources/**/*.{css,scss,vue,js,cjs,ts,json,md} *.{css,scss,vue,js,cjs,ts,json,md} tests/**/*.{css,scss,vue,js,cjs,ts,json,md}"
     },
     "dependencies": {
-        "@vitejs/plugin-vue": "^5.1.1",
-        "autoprefixer": "^10.4.19",
-        "axios": "^1.7.2",
+        "@vitejs/plugin-vue": "^5.1.2",
+        "autoprefixer": "^10.4.20",
+        "axios": "^1.7.3",
         "laravel-echo": "^1.16.1",
         "laravel-vite-plugin": "^1.0.5",
         "lodash": "^4.17.21",
@@ -31,12 +31,12 @@
         "vue": "^3.4.35",
         "vue-clipboard3": "^2.0.0",
         "vue-loader": "^17.4.2",
-        "vue-router": "^4.4.1",
+        "vue-router": "^4.4.2",
         "vue-screen": "^2.4.0"
     },
     "devDependencies": {
         "@pinia/testing": "^0.1.4",
-        "@swc/core": "^1.7.4",
+        "@swc/core": "^1.7.6",
         "@tsconfig/recommended": "^1.0.7",
         "@types/chai": "^4.3.17",
         "@types/jest": "^29.5.12",
