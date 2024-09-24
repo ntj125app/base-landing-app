@@ -20,7 +20,7 @@ Route::get('/sanctum/csrf-cookie', function () {
 });
 
 Route::get('/php-debug', function () {
-    if (!app()->environment('local')) {
+    if (! app()->environment('local')) {
         return response()->json(['status' => 'error', 'message' => 'This feature is only available in local environment.'], 403);
     } else {
         phpinfo();
