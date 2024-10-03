@@ -1,19 +1,18 @@
 <script setup lang="ts">
-import { storeToRefs } from "pinia";
-import { useMainStore } from "../AppState";
+import { storeToRefs } from 'pinia';
+import { useMainStore } from '../AppState';
 
-import CmpPusherState from "./CmpPusherState.vue";
-import CmpClearCacheButton from "./CmpClearCacheButton.vue";
-
-const main = useMainStore();
-const { browserSuppport } = storeToRefs(main);
+import CmpPusherState from './CmpPusherState.vue';
+import CmpClearCacheButton from './CmpClearCacheButton.vue';
 
 const props = defineProps({
     pageTitle: {
         type: String,
-        default: "",
+        default: '',
     },
 });
+const main = useMainStore();
+const { browserSuppport } = storeToRefs(main);
 </script>
 
 <template>
@@ -26,17 +25,11 @@ const props = defineProps({
             </div>
 
             <div class="flex justify-end w-full">
-                <div
-                    v-if="browserSuppport"
-                    class="flex justify-end w-full my-auto"
-                >
+                <div v-if="browserSuppport" class="flex justify-end w-full my-auto">
                     <CmpClearCacheButton />
                     <CmpPusherState />
                 </div>
-                <div
-                    v-if="!browserSuppport"
-                    class="flex justify-end w-full my-auto"
-                >
+                <div v-if="!browserSuppport" class="flex justify-end w-full my-auto">
                     <CmpClearCacheButton />
                     <button class="btn btn-sm btn-error">
                         <i class="pi pi-times m-1" />
