@@ -12,6 +12,7 @@ Artisan::command('system:refresh', function () {
         Feature::purge();
     }
 
+    $this->call('views:clear');
     $this->info('Cache cleared');
 
     $this->info('System refreshed');
