@@ -14,6 +14,29 @@ class InterfaceClass implements PermissionConst, ResetPassConst, RoleConst
         //
     }
 
+    /**
+     * List of user Permission
+     */
+    public const ALLPERM = [
+        self::SUPER,
+    ];
+
+    public const SUPER = 'root';
+
+    /**
+     * Reset password to this password
+     */
+    public const RESETPASSWORD = 'reset';
+
+    /**
+     * List of user Roles
+     */
+    public const ALLROLE = [
+        self::SUPERROLE,
+    ];
+
+    public const SUPERROLE = 'SU';
+
     public static function readApplicationVersion(): string
     {
         try {
